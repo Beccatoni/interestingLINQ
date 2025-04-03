@@ -32,3 +32,12 @@ foreach (string s in methodResult)
 {
     Console.WriteLine(s);
 }
+
+var heroesWithI = from h in heroes where h.Contains('i') select h;
+      
+var underscored = from h in heroes select h.Replace('a', '_');
+
+var heroesWithI2 = heroes.Where(h => h.Contains('i'));
+foreach(var h in heroesWithI){
+    Console.WriteLine(h);
+}
